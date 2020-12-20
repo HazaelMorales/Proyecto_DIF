@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.dif">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.DIF"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".mostrarbene_secre"></activity>
+        <activity android:name=".areajuridica_secre" />
+        <activity android:name=".General_Dir" />
+        <activity android:name=".general" />
+        <activity android:name=".trabajadores" />
+        <activity android:name=".admin" />
+        <activity android:name=".mostrarbeneficiarios" />
+        <activity android:name=".canalizar" />
+        <activity android:name=".interfazjuridica" />
+        <activity android:name=".areajuridica" />
+        <activity android:name=".interfazsocial" />
+        <activity android:name=".areasocial" />
+        <activity android:name=".registrobeneficiario" />
+        <activity android:name=".registro" />
+        <activity android:name=".casos" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

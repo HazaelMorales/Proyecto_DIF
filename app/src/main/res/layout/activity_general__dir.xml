@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EFF1F8"
+    tools:context=".General_Dir">
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="#687089"
+        android:paddingTop="25dp"
+        android:text="Areas"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="125dp"
+        android:layout_marginRight="125dp"
+        android:background="@mipmap/logodif"
+        android:layout_below="@+id/text1"/>
+
+    <Button
+        android:id="@+id/btnmed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="300dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:background="#687089"
+        android:text="Medica"
+        app:backgroundTint="#687089"
+        android:layout_below="@+id/text1"/>
+    <Button
+        android:id="@+id/btnjur"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:background="#687089"
+        android:text="Juridica"
+        app:backgroundTint="#687089"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/btnmed"/>
+    <Button
+        android:id="@+id/btnpsi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:background="#687089"
+        android:text="Psicologica"
+        app:backgroundTint="#687089"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/btnjur"/>
+    <Button
+        android:id="@+id/btnsoc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:background="#687089"
+        android:text="Trabajo Social"
+        app:backgroundTint="#687089"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/btnpsi"/>
+    <Button
+        android:id="@+id/btnmen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:background="#687089"
+        android:text="Regresar al Menu"
+        app:backgroundTint="#687089"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/btnsoc"/>
+</RelativeLayout>

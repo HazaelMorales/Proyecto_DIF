@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EFF1F8"
+    tools:context=".canalizar">
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="#687089"
+        android:paddingTop="25dp"
+        android:text="Canalizar"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="125dp"
+        android:layout_marginRight="125dp"
+        android:background="@mipmap/logodif"
+        android:layout_below="@+id/text1"/>
+
+    <EditText
+        android:id="@+id/canalizaraarea"
+        android:layout_marginTop="300dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/text1"
+        android:background="#FFFFFF"
+        android:ems="10"
+        android:hint="Area a Canalizar*"
+        android:inputType="text"
+        android:paddingRight="15dp"
+        android:textColorHint="#99000000"
+        android:textColor="#000000"
+        />
+    <EditText
+        android:id="@+id/descripcion"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:textColorHint="#99000000"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/canalizaraarea"
+        android:background="#FFFFFF"
+        android:ems="10"
+        android:hint="Descripcion*"
+        android:inputType="text"
+        android:paddingRight="15dp"
+        android:textColor="#000000"
+        />
+
+    <Button
+        android:id="@+id/next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#687089"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:text="Aceptar"
+        app:backgroundTint="#687089"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/descripcion"/>
+    <Button
+        android:id="@+id/regresar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#687089"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:text="regresar"
+        app:backgroundTint="#687089"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/next"/>
+</RelativeLayout>
