@@ -35,14 +35,11 @@ public class mostrarbeneficiarios extends AppCompatActivity implements  View.OnC
         mostrarbene = (Button) findViewById(R.id.submit);
         mostrarbene.setOnClickListener(this);
         listabeneficiarios();
-        libenefi.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        libenefi.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
-                id_beneficiario = position+1;
-            }
-            @Override
-            public void onNothingSelected(AdapterView<?> adapterView) {
-                // DO Nothing here
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent a1 = new Intent(mostrarbeneficiarios.this,areajuridicaseguimiento.class);
+                startActivity(a1);
             }
         });
     }
