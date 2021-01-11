@@ -44,7 +44,7 @@ public class mostrarbeneficiarios extends AppCompatActivity implements  View.OnC
         });
     }
     private void listabeneficiarios(){
-        String url = "http://192.168.0.4/dif_php/obtenerBeneficiarios.php";
+        String url = "https://checolin00p2.000webhostapp.com/DIF/dif_php/obtenerBeneficiarios.php";
         cliente.post(url, new AsyncHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {

@@ -151,7 +151,7 @@ public class registrobeneficiario extends AppCompatActivity implements View.OnCl
             benenombreescuela.setError("Complete los campos");
         } else {
             progressDialog.show();
-            StringRequest request = new StringRequest(Request.Method.POST, "http://192.168.0.4/dif_php/ingresar_beneficiario.php", new Response.Listener<String>() {
+            StringRequest request = new StringRequest(Request.Method.POST, "https://checolin00p2.000webhostapp.com/DIF/dif_php/ingresar_beneficiario.php", new Response.Listener<String>() {
                 @Override
                 public void onResponse(String response) {
                     if (response.equalsIgnoreCase("Datos Insertados")) {

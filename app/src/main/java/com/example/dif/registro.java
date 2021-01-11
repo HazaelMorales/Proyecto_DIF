@@ -118,7 +118,7 @@ public class registro extends AppCompatActivity{
         }
         else{
             progressDialog.show();
-            StringRequest request=new StringRequest(Request.Method.POST, "http://192.168.0.4/dif_php/ingresar_usuarios.php", new Response.Listener<String>() {
+            StringRequest request=new StringRequest(Request.Method.POST, "https://checolin00p2.000webhostapp.com/DIF/dif_php/ingresar_usuarios.php", new Response.Listener<String>() {
                 @Override
                 public void onResponse(String response) {
                     if(response.equalsIgnoreCase("Datos Insertados")) {
@@ -153,7 +153,7 @@ public class registro extends AppCompatActivity{
         }
     }
     private void rolesSpinner(){
-        String url = "http://192.168.0.4/dif_php/obtenerDatos.php";
+        String url = "https://checolin00p2.000webhostapp.com/DIF/dif_php/obtenerDatos.php";
         cliente.post(url, new AsyncHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {

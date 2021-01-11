@@ -45,7 +45,7 @@ public class trabajadores extends AppCompatActivity implements View.OnClickListe
         });
     }
     private void listabeneficiarios(){
-        String url = "http://192.168.0.4/dif_php/obtenerTrabajadores.php";
+        String url = "https://checolin00p2.000webhostapp.com/DIF/dif_php/obtenerTrabajadores.php";
         cliente.post(url, new AsyncHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
