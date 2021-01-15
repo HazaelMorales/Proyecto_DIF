@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class interfazjuridica extends AppCompatActivity implements View.OnClickListener{
- Button nuevo,seguir,canalizar;
+ Button nuevo,seguir,canalizar,salir;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -16,9 +16,11 @@ public class interfazjuridica extends AppCompatActivity implements View.OnClickL
         nuevo = (Button) findViewById(R.id.nuevobene);
         seguir = (Button) findViewById(R.id.seguimiento);
         canalizar = (Button) findViewById(R.id.canalizar);
+        salir = (Button) findViewById(R.id.salir);
         nuevo.setOnClickListener(this);
         seguir.setOnClickListener(this);
         canalizar.setOnClickListener(this);
+        salir.setOnClickListener(this);
     }
 
     @Override
@@ -35,6 +37,10 @@ public class interfazjuridica extends AppCompatActivity implements View.OnClickL
             case R.id.canalizar:
                 Intent k = new Intent(interfazjuridica.this,canalizar.class);
                 startActivity(k);
+                break;
+            case R.id.salir:
+                Intent a1 = new Intent(interfazjuridica.this,areajuridica.class);
+                startActivity(a1);
                 break;
         }
 

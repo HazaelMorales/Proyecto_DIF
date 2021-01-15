@@ -59,6 +59,17 @@
         app:backgroundTint="#687089"
         android:layout_marginTop="20dp"
         android:layout_below="@+id/seguimiento"/>
+    <Button
+        android:id="@+id/salir"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:background="#687089"
+        android:text="salir"
+        app:backgroundTint="#687089"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/canalizar"/>
 
 
 

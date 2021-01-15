@@ -121,6 +121,8 @@ public class registro extends AppCompatActivity{
                 public void onResponse(String response) {
                     if(response.equalsIgnoreCase("Datos Insertados")) {
                         Toast.makeText(registro.this,"Datos Ingresados Correctamente",Toast.LENGTH_LONG).show();
+                        Intent a6 = new Intent(registro.this, admin.class);
+                        startActivity(a6);
                     } else {
                         Toast.makeText(registro.this, response, Toast.LENGTH_LONG).show();
                     }

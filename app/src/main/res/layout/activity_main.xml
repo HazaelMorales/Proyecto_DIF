@@ -52,7 +52,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginRight="50dp"
         android:background="#FFFFFF"
-        android:hint="Contreseña"
+        android:hint="Contraseña"
         android:inputType="textPassword"
         android:textColor="#000000"
         android:textColorHint="#99000000" />
@@ -60,6 +60,8 @@
         android:id="@+id/login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
         android:background="#687089"
         android:text="Iniciar Sesion"
         app:backgroundTint="#687089"

@@ -81,6 +81,7 @@ public class trabajadores extends AppCompatActivity implements View.OnClickListe
             case R.id.submit:
                 Intent i = new Intent(trabajadores.this,admin.class);
                 startActivity(i);
+                finish();
                 break;
         }
     }
