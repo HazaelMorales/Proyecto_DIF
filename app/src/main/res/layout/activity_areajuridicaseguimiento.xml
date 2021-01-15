@@ -40,10 +40,11 @@
                 android:textSize="20sp" />
 
             <TextView
+                android:id="@+id/beneFullName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingLeft="50dp"
-                android:text="Roberto"
+                android:text="-"
                 android:textColor="#000000"
                 android:textSize="20sp" />
 
@@ -56,10 +57,11 @@
                 android:textSize="20sp" />
 
             <TextView
+                android:id="@+id/beneCurp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingLeft="50dp"
-                android:text="GABS000504HMNRTRA8"
+                android:text="-"
                 android:textColor="#000000"
                 android:textSize="20sp" />
 
@@ -72,10 +74,11 @@
                 android:textSize="20sp" />
 
             <TextView
+                android:id="@+id/beneNumero"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingLeft="50dp"
-                android:text="2147483647"
+                android:text="-"
                 android:textColor="#000000"
                 android:textSize="20sp" />
 
@@ -88,13 +91,30 @@
                 android:textSize="20sp" />
 
             <TextView
+                android:id="@+id/beneEstado"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingLeft="50dp"
-                android:text="Colima"
+                android:text="-"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="50dp"
+                android:text="Municipio"
                 android:textColor="#000000"
                 android:textSize="20sp" />
 
+
+            <TextView
+                android:id="@+id/beneMunicipio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="50dp"
+                android:text="-"
+                android:textColor="#000000"
+                android:textSize="20sp" />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -104,26 +124,27 @@
                 android:textSize="20sp" />
 
             <TextView
+                android:id="@+id/beneAddress"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingLeft="50dp"
-                android:text="Miguel Barbosa #117"
+                android:text="-"
                 android:textColor="#000000"
                 android:textSize="20sp" /><!--    Agregar calle -->
-<!--            <TextView-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:paddingLeft="50dp"-->
+            <!--            <TextView-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:paddingLeft="50dp"-->
 
-<!--                android:textColor="#000000"-->
-<!--                android:textSize="20sp" />&lt;!&ndash;Aregar colonia&ndash;&gt;-->
-<!--            <TextView-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:paddingLeft="50dp"-->
+            <!--                android:textColor="#000000"-->
+            <!--                android:textSize="20sp" />&lt;!&ndash;Aregar colonia&ndash;&gt;-->
+            <!--            <TextView-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:paddingLeft="50dp"-->
 
-<!--                android:textColor="#000000"-->
-<!--                android:textSize="20sp" />&lt;!&ndash;Agregar codigo postal&ndash;&gt;-->
+            <!--                android:textColor="#000000"-->
+            <!--                android:textSize="20sp" />&lt;!&ndash;Agregar codigo postal&ndash;&gt;-->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -133,10 +154,11 @@
                 android:textSize="20sp" />
 
             <TextView
+                android:id="@+id/beneSexo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingLeft="50dp"
-                android:text="Masculino"
+                android:text="-"
                 android:textColor="#000000"
                 android:textSize="20sp" />
 
@@ -149,13 +171,28 @@
                 android:textSize="20sp" />
 
             <TextView
+                android:id="@+id/beneFechaNacimiento"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingLeft="50dp"
-                android:text="2000-05-14"
+                android:text="-"
                 android:textColor="#000000"
                 android:textSize="20sp" />
-
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="50dp"
+                android:text="Lugar de Nacimiento"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+            <TextView
+                android:id="@+id/beneLugarNacimiento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="50dp"
+                android:text="-"
+                android:textColor="#000000"
+                android:textSize="20sp" />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -165,10 +202,11 @@
                 android:textSize="20sp" />
 
             <TextView
+                android:id="@+id/beneFechaRegistro"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingLeft="50dp"
-                android:text="2020-11-30"
+                android:text="-"
                 android:textColor="#000000"
                 android:textSize="20sp" />
 
@@ -181,10 +219,11 @@
                 android:textSize="20sp" />
 
             <TextView
+                android:id="@+id/beneEstadoCivil"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingLeft="50dp"
-                android:text="Soltero"
+                android:text="-"
                 android:textColor="#000000"
                 android:textSize="20sp" />
 
@@ -192,15 +231,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingLeft="50dp"
-                android:text="Fecha de Escolaridad"
+                android:text="Escolaridad"
                 android:textColor="#000000"
                 android:textSize="20sp" />
 
             <TextView
+                android:id="@+id/beneEscolaridad"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingLeft="50dp"
-                android:text="Preparatoria"
+                android:text="-"
                 android:textColor="#000000"
                 android:textSize="20sp" />
 
@@ -213,10 +253,11 @@
                 android:textSize="20sp" />
 
             <TextView
+                android:id="@+id/beneEscuela"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingLeft="50dp"
-                android:text="Universidad de Colima"
+                android:text="-"
                 android:textColor="#000000"
                 android:textSize="20sp" />
 
@@ -229,10 +270,11 @@
                 android:textSize="20sp" />
 
             <TextView
+                android:id="@+id/beneOcupacion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingLeft="50dp"
-                android:text="Estudiante"
+                android:text="-"
                 android:textColor="#000000"
                 android:textSize="20sp" />
 
