@@ -12,7 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DIF"
         android:usesCleartextTraffic="true">
-        <activity android:name=".areajuridicaseguimiento"></activity>
+        <activity android:name=".vercasos"></activity>
+        <activity android:name=".areajuridicaseguimiento" />
         <activity android:name=".mostrarbene_secre" />
         <activity android:name=".areajuridica_secre" />
         <activity android:name=".General_Dir" />

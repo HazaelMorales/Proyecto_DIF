@@ -21,7 +21,7 @@
     <ScrollView
         android:id="@+id/info"
         android:layout_width="match_parent"
-        android:layout_height="400dp"
+        android:layout_height="350dp"
         android:layout_marginTop="75dp">
 
         <LinearLayout
@@ -289,7 +289,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginRight="50dp"
         android:background="#687089"
-        android:text="Aceptar"
+        android:text="Menu Principal"
         app:backgroundTint="#687089" />
     <Button
         android:id="@+id/addnotes"

@@ -12,6 +12,22 @@ import androidx.appcompat.app.AppCompatActivity;
 public class areajuridica extends AppCompatActivity implements View.OnClickListener{
     Button salir,dir;
     @Override
+    public void onBackPressed() {
+        new AlertDialog.Builder(this)
+                .setTitle("Quieres Salir?")
+                .setMessage("Estas seguro de cerrar sesion?")
+                .setNegativeButton(android.R.string.no, null)
+                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+
+                    public void onClick(DialogInterface arg0, int arg1) {
+                        Intent a1 = new Intent(areajuridica.this, MainActivity.class); //Se crea y abre la activity de login
+                        startActivity(a1); // se inicia la activity de login
+                        finish(); // se mata la activity de admin
+
+                    }
+                }).create().show();
+    }
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_areajuridica);
@@ -30,26 +46,9 @@ public class areajuridica extends AppCompatActivity implements View.OnClickListe
                 finish();
                 break;
             case R.id.btnbye:
-                Intent j = new Intent(areajuridica.this,MainActivity.class);
-                startActivity(j);
-                finish();
+                onBackPressed();
                 break;
         }
     }
-    @Override
-    public void onBackPressed() {
-        new AlertDialog.Builder(this)
-                .setTitle("Quieres Salir?")
-                .setMessage("Estas seguro de cerrar sesion?")
-                .setNegativeButton(android.R.string.no, null)
-                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
 
-                    public void onClick(DialogInterface arg0, int arg1) {
-                        Intent a1 = new Intent(areajuridica.this, MainActivity.class); //Se crea y abre la activity de login
-                        startActivity(a1); // se inicia la activity de login
-                        finish(); // se mata la activity de admin
-
-                    }
-                }).create().show();
-    }
 }

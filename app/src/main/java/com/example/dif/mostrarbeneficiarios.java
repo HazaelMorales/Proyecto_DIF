@@ -37,7 +37,12 @@ public class mostrarbeneficiarios extends AppCompatActivity implements  View.OnC
     ListView libenefi;
     Button mostrarbene;
     public int id_beneficiario;
-
+    @Override
+    public void onBackPressed() {
+        Intent a1 = new Intent(mostrarbeneficiarios.this,interfazjuridica.class);
+        startActivity(a1);
+        finish();//matar  activity actual xd
+    }
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mostrarbeneficiarios);
@@ -90,6 +95,7 @@ public class mostrarbeneficiarios extends AppCompatActivity implements  View.OnC
             case R.id.submit:
                 Intent i = new Intent(mostrarbeneficiarios.this,interfazjuridica.class);
                 startActivity(i);
+                finish();
                 break;
         }
     }
@@ -117,6 +123,7 @@ public class mostrarbeneficiarios extends AppCompatActivity implements  View.OnC
                     String school = jsonObject.getString("nombre_escuela");
                     String ocup = jsonObject.getString("ocupacion");
                     Intent i = new Intent(mostrarbeneficiarios.this, areajuridicaseguimiento.class);
+                    finish();
                     i.putExtra("nombre",nombreCompleto);
                     i.putExtra("apellidoPa",ApellidoPaterno);
                     i.putExtra("apellidoMa",ApellidoMaterno);

@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class areajuridicaseguimiento extends AppCompatActivity implements View.OnClickListener{
     TextView txtName, txtCurp, txtTelefono, txtEstado, txtMunicipio, txtDomicilio, txtSexo, txtFecha_Nacimiento, txtLugar_Nacimiento, txtFecha_Registro, txtEstadoCivil, txtEscolaridad , txtNombre_Escuela ,txtOcupacion;
-    Button aceptar,addnote,canalizar;
+    Button aceptar,addnote,canalizar,vercasos;
     String valName,valApellidoMa,valApellidoPa,valCurp,valTelefono,valEstado,valMunicipio,valDomicilio,valSexo,valFechaNacimiento,valLugarNacimiento,valFechaRegistro,valEstadoCivil,valEscolaridad,valEscuela,valOcupacion;
 
     @Override
@@ -53,9 +53,11 @@ public class areajuridicaseguimiento extends AppCompatActivity implements View.O
         aceptar = (Button) findViewById(R.id.aceptar);
         addnote = (Button) findViewById(R.id.addnotes);
         canalizar= (Button) findViewById(R.id.cnalzar);
+        vercasos=(Button) findViewById(R.id.viewnotes);
         aceptar.setOnClickListener(this);
         addnote.setOnClickListener(this);
         canalizar.setOnClickListener(this);
+        vercasos.setOnClickListener(this);
 
         txtName.setText(valName+" "+ valApellidoPa + " " + valApellidoMa);
         txtCurp.setText(valCurp);
@@ -78,16 +80,31 @@ public class areajuridicaseguimiento extends AppCompatActivity implements View.O
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.aceptar:
-                Intent i = new Intent(areajuridicaseguimiento.this,mostrarbeneficiarios.class);
+                Intent i = new Intent(areajuridicaseguimiento.this,interfazjuridica.class);
                 startActivity(i);
+                finish();
                 break;
             case R.id.addnotes:
                 Intent i1 = new Intent(areajuridicaseguimiento.this,casos.class);
                 startActivity(i1);
+                finish();
                 break;
             case R.id.cnalzar:
                 Intent i2 = new Intent(areajuridicaseguimiento.this,canalizar.class);
                 startActivity(i2);
+                finish();
+                break;
+            case R.id.viewnotes:
+                Intent i3 = new Intent(areajuridicaseguimiento.this, vercasos.class);
+                startActivity(i3);
+                finish();
                 break;
     }}
+    @Override
+    public void onBackPressed() {
+        Intent i2 = new Intent(areajuridicaseguimiento.this,interfazjuridica.class);
+        startActivity(i2);
+        finish();
+    }
+
 }

@@ -1,12 +1,15 @@
 package com.example.dif;
 
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.android.volley.AuthFailureError;
@@ -66,6 +69,21 @@ public class registrobeneficiario extends AppCompatActivity implements View.OnCl
         benefechregistro.setOnClickListener(this);
         benefechanacimiento.setOnClickListener(this);
 
+    }
+    @Override
+    public void onBackPressed() {
+        new AlertDialog.Builder(this)
+                .setTitle("Quieres Salir?")
+                .setMessage("Estas seguro de salir registro de Beneficiario?")
+                .setNegativeButton(android.R.string.no, null)
+                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+
+                    public void onClick(DialogInterface arg0, int arg1) {
+                        Intent i = new Intent(registrobeneficiario.this,interfazjuridica.class);
+                        startActivity(i);
+                        finish();//cerrar la aplicacion xd
+                    }
+                }).create().show();
     }
     @Override
     public void onClick(View view) {
@@ -155,6 +173,9 @@ public class registrobeneficiario extends AppCompatActivity implements View.OnCl
                 public void onResponse(String response) {
                     if (response.equalsIgnoreCase("Datos Insertados")) {
                         Toast.makeText(registrobeneficiario.this, "Datos Ingresados Correctamente", Toast.LENGTH_LONG).show();
+                        Intent i = new Intent(registrobeneficiario.this,areajuridicaseguimiento.class);
+                        startActivity(i);
+                        finish();
                     } else {
                         Toast.makeText(registrobeneficiario.this, response, Toast.LENGTH_LONG).show();
                     }

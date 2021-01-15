@@ -1,6 +1,4 @@
 package com.example.dif;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,6 +6,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -27,8 +27,14 @@ public class casos extends AppCompatActivity implements View.OnClickListener{
     private EditText descripcion;
     private EditText estado;
     int clicker = 0;
-
     Button aceptar;
+    @Override
+    public void onBackPressed() {
+        Intent i2 = new Intent(casos.this,interfazjuridica.class);
+        startActivity(i2);
+        finish();
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,6 +55,7 @@ public class casos extends AppCompatActivity implements View.OnClickListener{
                 insertar_caso();
                 Intent i = new Intent(casos.this,interfazjuridica.class);
                 startActivity(i);
+                finish();
                 break;
             case R.id.fapertura:
                 showDatePickerDialog();
