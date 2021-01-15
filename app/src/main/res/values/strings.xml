@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">DIF</string>
+    <string name="URL_USUARIOS">https://checolin00p2.000webhostapp.com/DIF/dif_php/buscarTrabajador.php</string>
 </resources>
