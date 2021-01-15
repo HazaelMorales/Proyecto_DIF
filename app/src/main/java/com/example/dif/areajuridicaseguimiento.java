@@ -10,13 +10,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class areajuridicaseguimiento extends AppCompatActivity implements View.OnClickListener{
     TextView txtName, txtCurp, txtTelefono, txtEstado, txtMunicipio, txtDomicilio, txtSexo, txtFecha_Nacimiento, txtLugar_Nacimiento, txtFecha_Registro, txtEstadoCivil, txtEscolaridad , txtNombre_Escuela ,txtOcupacion;
-    Button aceptar;
+    Button aceptar,addnote,canalizar;
     String valName,valApellidoMa,valApellidoPa,valCurp,valTelefono,valEstado,valMunicipio,valDomicilio,valSexo,valFechaNacimiento,valLugarNacimiento,valFechaRegistro,valEstadoCivil,valEscolaridad,valEscuela,valOcupacion;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_areajuridicaseguimiento);
+
         txtName = (TextView) findViewById(R.id.beneFullName);
         txtCurp = (TextView) findViewById(R.id.beneCurp);
         txtTelefono = (TextView) findViewById(R.id.beneNumero);
@@ -50,7 +51,11 @@ public class areajuridicaseguimiento extends AppCompatActivity implements View.O
         valOcupacion = getIntent().getStringExtra("benOcup");
 
         aceptar = (Button) findViewById(R.id.aceptar);
+        addnote = (Button) findViewById(R.id.addnotes);
+        canalizar= (Button) findViewById(R.id.cnalzar);
         aceptar.setOnClickListener(this);
+        addnote.setOnClickListener(this);
+        canalizar.setOnClickListener(this);
 
         txtName.setText(valName+" "+ valApellidoPa + " " + valApellidoMa);
         txtCurp.setText(valCurp);
@@ -75,6 +80,14 @@ public class areajuridicaseguimiento extends AppCompatActivity implements View.O
             case R.id.aceptar:
                 Intent i = new Intent(areajuridicaseguimiento.this,mostrarbeneficiarios.class);
                 startActivity(i);
+                break;
+            case R.id.addnotes:
+                Intent i1 = new Intent(areajuridicaseguimiento.this,casos.class);
+                startActivity(i1);
+                break;
+            case R.id.cnalzar:
+                Intent i2 = new Intent(areajuridicaseguimiento.this,canalizar.class);
+                startActivity(i2);
                 break;
     }}
 }
