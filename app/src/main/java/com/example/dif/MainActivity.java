@@ -100,10 +100,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                                 finish();
                                 break;
                             case "4":
-                                Toast.makeText(MainActivity.this, "En proceso", Toast.LENGTH_LONG).show();
+                                Intent a3 = new Intent(MainActivity.this, area_trabajosocial.class);
+                                startActivity(a3);
+                                finish();
                                 break;
                             case "5":
-                                Toast.makeText(MainActivity.this, "En proceso", Toast.LENGTH_LONG).show();
+                                Intent a4 = new Intent(MainActivity.this, area_psicologia.class);
+                                startActivity(a4);
+                                finish();
+                                break;
+                            case "6":
+                                Intent a5 = new Intent(MainActivity.this, area_medica.class);
+                                startActivity(a5);
+                                finish();
                                 break;
                             case "7":
                                 Intent a6 = new Intent(MainActivity.this, areajuridica_secre.class);

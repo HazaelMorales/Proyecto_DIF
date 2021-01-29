@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EFF1F8"
+    tools:context=".registro_area_psicologica">
+
+
+
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="#687089"
+        android:paddingTop="25dp"
+        android:text="Registrar Beneficiario"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
+
+    <ScrollView
+        android:id="@+id/referenciaxd"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_marginTop="75dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:orientation="vertical"
+            >
+
+
+            <EditText
+                android:id="@+id/benename"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/text1"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="75dp"
+                android:layout_marginRight="50dp"
+                android:background="#FFFFFF"
+                android:ems="10"
+                android:hint="Nombre*"
+                android:inputType="text"
+                android:paddingRight="15dp"
+                android:textColor="#000000"
+                android:textColorHint="#99000000" />
+
+            <EditText
+                android:id="@+id/benenamedad"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/workname"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="50dp"
+                android:background="#FFFFFF"
+                android:ems="10"
+                android:hint="Apellido Paterno*"
+                android:inputType="text"
+                android:paddingRight="15dp"
+                android:textColor="#000000"
+                android:textColorHint="#99000000" />
+
+
+            <EditText
+                android:id="@+id/benenamemom"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/worknamedad"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="50dp"
+                android:background="#FFFFFF"
+                android:ems="10"
+                android:hint="Apellido Materno*"
+                android:inputType="text"
+                android:paddingRight="15dp"
+                android:textColor="#000000"
+                android:textColorHint="#99000000" />
+
+            <EditText
+                android:id="@+id/curp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/worknamemom"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="50dp"
+                android:background="#FFFFFF"
+                android:ems="10"
+                android:hint="Curp*"
+                android:inputType="text"
+                android:paddingRight="15dp"
+                android:textColor="#000000"
+                android:textColorHint="#99000000" />
+
+            <EditText
+                android:id="@+id/benenum"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/correo"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="50dp"
+                android:background="#FFFFFF"
+                android:ems="10"
+                android:hint="Numero*"
+                android:inputType="number"
+                android:textColor="#000000"
+                android:textColorHint="#99000000" />
+
+            <EditText
+                android:id="@+id/baneestado"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/contra"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="50dp"
+                android:background="#FFFFFF"
+                android:ems="10"
+                android:hint="Estado*"
+                android:inputType="text"
+                android:paddingRight="15dp"
+                android:textColor="#000000"
+                android:textColorHint="#99000000" />
+
+            <EditText
+                android:id="@+id/benemunicipio"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/rol"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="50dp"
+                android:background="#FFFFFF"
+                android:ems="10"
+                android:hint="Municipio*"
+                android:inputType="text"
+                android:paddingRight="15dp"
+                android:textColor="#000000"
+                android:textColorHint="#99000000" />
+
+            <EditText
+                android:id="@+id/benedomicilio"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/rol"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="50dp"
+                android:background="#FFFFFF"
+                android:ems="10"
+                android:hint="Domicilio*"
+                android:inputType="text"
+                android:paddingRight="15dp"
+                android:textColor="#000000"
+                android:textColorHint="#99000000" />
+
+            <EditText
+                android:id="@+id/benesexo"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/rol"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="50dp"
+                android:background="#FFFFFF"
+                android:ems="10"
+                android:hint="Sexo*"
+                android:inputType="text"
+                android:paddingRight="15dp"
+                android:textColor="#000000"
+                android:textColorHint="#99000000" />
+
+            <EditText
+                android:id="@+id/benefechanacimiento"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/rol"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="50dp"
+                android:background="#FFFFFF"
+                android:ems="10"
+                android:hint="Fecha de nacimiento*"
+                android:inputType="date"
+                android:paddingRight="15dp"
+                android:textColor="#000000"
+                android:textColorHint="#99000000"
+                android:focusable="false"
+                android:clickable="true"/>
+
+            <EditText
+                android:id="@+id/benelugarnacimiento"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/rol"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="50dp"
+                android:background="#FFFFFF"
+                android:ems="10"
+                android:hint="Lugar de nacimiento*"
+                android:inputType="text"
+                android:paddingRight="15dp"
+                android:textColor="#000000"
+                android:textColorHint="#99000000" />
+
+            <EditText
+                android:id="@+id/benefechregistro"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/benelugarnacimiento"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="50dp"
+                android:background="#FFFFFF"
+                android:clickable="true"
+                android:ems="10"
+                android:focusable="false"
+                android:hint="Fecha de registro"
+                android:inputType="date"
+                android:paddingRight="15dp"
+                android:textColor="#000000"
+                android:textColorHint="#99000000" />
+
+            <EditText
+                android:id="@+id/beneestadocivil"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/rol"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="50dp"
+                android:background="#FFFFFF"
+                android:ems="10"
+                android:hint="Estado civil*"
+                android:inputType="text"
+                android:paddingRight="15dp"
+                android:textColor="#000000"
+                android:textColorHint="#99000000" />
+
+            <EditText
+                android:id="@+id/benenombreescuela"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/beneestadocivil"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="50dp"
+                android:background="#FFFFFF"
+                android:ems="10"
+                android:hint="NombreEscuela**"
+                android:inputType="text"
+                android:paddingRight="15dp"
+                android:textColor="#000000"
+                android:textColorHint="#99000000" />
+
+            <EditText
+                android:id="@+id/beneescolaridad"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/benenombreescuela"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="50dp"
+                android:background="#FFFFFF"
+                android:ems="10"
+                android:hint="Escolaridad*"
+                android:inputType="text"
+                android:paddingRight="15dp"
+                android:textColor="#000000"
+                android:textColorHint="#99000000" />
+
+            <EditText
+                android:id="@+id/beneocupacion"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/beneescolaridad"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="50dp"
+                android:background="#FFFFFF"
+                android:ems="10"
+                android:hint="Ocupacion*"
+                android:inputType="text"
+                android:paddingRight="15dp"
+                android:textColor="#000000"
+                android:textColorHint="#99000000" />
+
+
+        </LinearLayout>
+    </ScrollView>
+    <Button
+        android:id="@+id/registrar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/referenciaxd"
+        android:layout_marginTop="30dp"
+        android:background="#687089"
+        android:text="Registrar"
+        app:backgroundTint="#687089" />
+
+</RelativeLayout>

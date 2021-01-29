@@ -1,8 +1,10 @@
 package com.example.dif;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -43,7 +45,12 @@ public class registro extends AppCompatActivity{
         public int id_role;
         String new_password;
         private Handler rdatos = new Handler();
-
+    @Override
+    public void onBackPressed() {
+        Intent b = new Intent(registro.this,admin.class);
+        startActivity(b);
+        finish();//cerrar la aplicacion x
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -64,11 +71,13 @@ public class registro extends AppCompatActivity{
            public void onClick(View v) {
                insertar();
                if (id_role==(4)){
-                   Intent a = new Intent(registro.this,areasocial.class);
+                   Intent a = new Intent(registro.this,admin.class);
                    startActivity(a);
+                   finish();
                }else if (id_role == (5)){
-                   Intent b = new Intent(registro.this,areajuridica.class);
+                   Intent b = new Intent(registro.this,admin.class);
                    startActivity(b);
+                   finish();
                }
            }
          });
@@ -123,6 +132,7 @@ public class registro extends AppCompatActivity{
                         Toast.makeText(registro.this,"Datos Ingresados Correctamente",Toast.LENGTH_LONG).show();
                         Intent a6 = new Intent(registro.this, admin.class);
                         startActivity(a6);
+                        finish();
                     } else {
                         Toast.makeText(registro.this, response, Toast.LENGTH_LONG).show();
                     }

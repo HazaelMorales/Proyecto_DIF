@@ -56,6 +56,7 @@ public class mostrarbeneficiarios extends AppCompatActivity implements  View.OnC
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String hola = parent.getItemAtPosition(position).toString();
                 enviarDatos(hola);
+
             }
         });
     }

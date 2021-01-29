@@ -10,7 +10,6 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 
-import com.example.dif.funciones.Trabajador;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 
@@ -25,6 +24,12 @@ public class trabajadores extends AppCompatActivity implements View.OnClickListe
     ListView libenefi;
     Button menu;
     public int id_beneficiario;
+    @Override
+    public void onBackPressed() {
+        Intent b = new Intent(trabajadores.this,admin.class);
+        startActivity(b);
+        finish();//cerrar la aplicacion x
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -84,5 +89,4 @@ public class trabajadores extends AppCompatActivity implements View.OnClickListe
                 finish();
                 break;
         }
-    }
-}
+    }}

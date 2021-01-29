@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#EFF1F8"
-    tools:context=".mostrarbeneficiarios">
+    tools:context=".seguimiento_psicologia">
     <TextView
         android:id="@+id/text1"
         android:layout_width="match_parent"
@@ -35,5 +35,4 @@
         app:backgroundTint="#687089"
         android:layout_marginTop="20dp"
         android:layout_below="@+id/libenefi"/>
-
 </RelativeLayout>
