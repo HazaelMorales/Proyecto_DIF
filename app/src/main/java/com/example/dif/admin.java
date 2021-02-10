@@ -31,11 +31,7 @@ public class admin extends AppCompatActivity implements View.OnClickListener{
                 startActivity(a);//Se crea y abre la nueva pantalla de registro de trabajadores
                 finish();// se mata la pantalla actual de admin
                 break;
-            case R.id.btnuslist:
-                Intent a1 = new Intent(admin.this, trabajadores.class);
-                startActivity(a1); //Se crea y abre la nueva pantalla de trabajadores
-                finish(); // se mata la pantalla actual de admin
-                break;
+
             case R.id.btnbye:
                 onBackPressed(); //Al precionar el boton de cerrar sesion o el boton de regresar
                                 // se cierra abre el activity de login

@@ -1,6 +1,8 @@
 package com.example.dif;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -35,21 +37,23 @@ import cz.msebera.android.httpclient.Header;
 public class seguimiento_trabajosocial extends AppCompatActivity implements  View.OnClickListener {
     private AsyncHttpClient cliente;
     ListView libenefi;
-    Button mostrarbene;
+    Button mostrarbene, parentesco;
     public int id_beneficiario;
     @Override
     public void onBackPressed() {
-        Intent a1 = new Intent(seguimiento_trabajosocial.this,interfazjuridica.class);
+        Intent a1 = new Intent(seguimiento_trabajosocial.this,area_trabajosocial.class);
         startActivity(a1);
         finish();//matar  activity actual xd
     }
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_mostrarbeneficiarios);
+        setContentView(R.layout.activity_seguimiento_trabajosocial);
         cliente = new AsyncHttpClient();
         libenefi = (ListView) findViewById(R.id.libenefi);
         mostrarbene = (Button) findViewById(R.id.submit);
+        parentesco = (Button) findViewById(R.id.submit2);
         mostrarbene.setOnClickListener(this);
+        parentesco.setOnClickListener(this);
         listabeneficiarios();
         libenefi.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -98,10 +102,16 @@ public class seguimiento_trabajosocial extends AppCompatActivity implements  Vie
                 startActivity(i);
                 finish();
                 break;
+            case R.id.submit2:
+                Intent p = new Intent(seguimiento_trabajosocial.this, parentesco.class);
+                startActivity(p);
+                break;
         }
     }
     private void enviarDatos(String a){
         String posicion = a;
+        //SharedPreferences ponysBeneficiario = getSharedPreferences("Rarity", Context.MODE_PRIVATE);
+        //SharedPreferences.Editor editor = ponysBeneficiario.edit();
         StringRequest request = new StringRequest(Request.Method.POST, "https://checolin00p2.000webhostapp.com/DIF/dif_php/mostrarDatosBeneficiarios.php", new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {

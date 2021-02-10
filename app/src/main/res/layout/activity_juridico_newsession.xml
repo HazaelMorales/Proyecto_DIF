@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EFF1F8"
+    tools:context=".Juridico_newsession">
+
+    <TextView
+    android:id="@+id/text1"
+    android:layout_width="match_parent"
+    android:layout_height="75dp"
+    android:background="#687089"
+    android:paddingTop="25dp"
+    android:text="Registrar Nueva sesion"
+    android:textAlignment="center"
+    android:textColor="#FFFFFF"
+    android:textSize="18sp" />
+
+    <ScrollView
+        android:id="@+id/referenciaxd"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_marginTop="75dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:orientation="vertical"
+            >
+
+
+            <EditText
+                android:id="@+id/sfecharef"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/benelugarnacimiento"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="50dp"
+                android:background="#FFFFFF"
+                android:clickable="true"
+                android:ems="10"
+                android:focusable="false"
+                android:hint="Fecha de registro"
+                android:inputType="date"
+                android:paddingRight="15dp"
+                android:textColor="#000000"
+                android:textColorHint="#99000000" /> />
+
+            <EditText
+                android:id="@+id/sprocedencia"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/workname"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="50dp"
+                android:background="#FFFFFF"
+                android:ems="10"
+                android:hint="Procedencia*"
+                android:inputType="text"
+                android:paddingRight="15dp"
+                android:textColor="#000000"
+                android:textColorHint="#99000000" />
+
+
+            <EditText
+                android:id="@+id/sobservacionrele"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/worknamedad"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="50dp"
+                android:background="#FFFFFF"
+                android:ems="10"
+                android:hint="Observaciones Relevantes*"
+                android:inputType="text"
+                android:paddingRight="15dp"
+                android:textColor="#000000"
+                android:textColorHint="#99000000" />
+            <EditText
+                android:id="@+id/stelefonof"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/correo"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="50dp"
+                android:background="#FFFFFF"
+                android:ems="10"
+                android:hint="Numero Telefonico*"
+                android:inputType="number"
+                android:textColor="#000000"
+                android:textColorHint="#99000000" />
+            <EditText
+                android:id="@+id/stelefonoalterf"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/worknamemom"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="50dp"
+                android:background="#FFFFFF"
+                android:ems="10"
+                android:hint="Numero Alternativo*"
+                android:inputType="number"
+                android:paddingRight="15dp"
+                android:textColor="#000000"
+                android:textColorHint="#99000000" />
+
+
+
+            <EditText
+                android:id="@+id/sprocesactf"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/contra"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="50dp"
+                android:background="#FFFFFF"
+                android:ems="10"
+                android:hint="Proceso actual iniciado*"
+                android:inputType="number"
+                android:paddingRight="15dp"
+                android:textColor="#000000"
+                android:textColorHint="#99000000" />
+
+            <EditText
+                android:id="@+id/sopcionseguif"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/rol"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="50dp"
+                android:background="#FFFFFF"
+                android:ems="10"
+                android:hint="Opcion de seguimiento*"
+                android:inputType="text"
+                android:paddingRight="15dp"
+                android:textColor="#000000"
+                android:textColorHint="#99000000" />
+
+            <EditText
+                android:id="@+id/sdescripciondetalladaf"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/rol"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="50dp"
+                android:background="#FFFFFF"
+                android:ems="10"
+                android:hint="Descripcion Detallada*"
+                android:inputType="text"
+                android:paddingRight="15dp"
+                android:textColor="#000000"
+                android:textColorHint="#99000000" />
+
+            <EditText
+                android:id="@+id/sprocesopendf"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/rol"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="50dp"
+                android:background="#FFFFFF"
+                android:ems="10"
+                android:hint="Proceso_Pendiente*"
+                android:inputType="number"
+                android:paddingRight="15dp"
+                android:textColor="#000000"
+                android:textColorHint="#99000000" />
+
+
+        </LinearLayout>
+    </ScrollView>
+    <Button
+        android:id="@+id/registrarf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/referenciaxd"
+        android:layout_marginTop="30dp"
+        android:background="#687089"
+        android:text="Registrar"
+        app:backgroundTint="#687089" />
+
+</RelativeLayout>

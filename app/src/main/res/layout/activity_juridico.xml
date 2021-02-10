@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EFF1F8"
+    tools:context=".Juridico">
+    <TextView
+        android:id="@+id/smain"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="#687089"
+        android:paddingTop="25dp"
+        android:text="Area Juridica"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="125dp"
+        android:layout_marginRight="125dp"
+        android:background="@mipmap/logodif"
+        android:layout_below="@+id/smain"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="300dp"
+        android:layout_below="@+id/smain">
+
+
+
+        <Button
+        android:id="@+id/snbeneficiario"
+        android:textAllCaps="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:background="#687089"
+        android:textSize="16dp"
+        android:text="Registrar Beneficiario"
+        app:backgroundTint="#687089" />
+        <Button
+        android:id="@+id/sverbene"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="50dp"
+        android:background="#687089"
+        android:text="Ver Beneficiarios"
+        android:textAllCaps="false"
+        android:textSize="16dp"
+        app:backgroundTint="#687089" />
+        <Button
+        android:id="@+id/svsesion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="50dp"
+        android:background="#687089"
+        android:text="Ver Casos"
+        android:textAllCaps="false"
+        android:textSize="16dp"
+        app:backgroundTint="#687089" />
+
+
+        <Button
+        android:id="@+id/scerrar"
+        android:textAllCaps="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:background="#687089"
+        android:text="Salir"
+        app:backgroundTint="#687089"
+        android:textSize="16dp"
+        android:layout_marginTop="20dp" />
+    </LinearLayout>
+</RelativeLayout>

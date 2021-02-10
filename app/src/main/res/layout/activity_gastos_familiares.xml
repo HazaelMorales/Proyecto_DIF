@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EFF1F8"
+    tools:context=".gastos_familiares">
+
+
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="#687089"
+        android:paddingTop="25dp"
+        android:text="Gastos Familiares"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/es"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/text1"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginRight="50dp"
+        android:background="#FFFFFF"
+        android:ems="10"
+        android:hint="ID estudio socioeconómico:"
+        android:inputType="numberDecimal"
+        android:paddingRight="15dp"
+        android:textColor="#000000"
+        android:textColorHint="#99000000" />
+
+    <EditText
+        android:id="@+id/tipogast"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_below="@+id/es"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginRight="50dp"
+        android:background="#FFFFFF"
+        android:ems="10"
+        android:hint="Tipo de gasto:"
+        android:inputType="text"
+        android:paddingRight="15dp"
+        android:textColor="#000000"
+        android:textColorHint="#99000000" />
+
+    <EditText
+        android:id="@+id/monto"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/tipogast"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginRight="50dp"
+        android:background="#FFFFFF"
+        android:ems="10"
+        android:hint="Monto total:"
+        android:inputType="number"
+        android:paddingRight="15dp"
+        android:textColor="#000000"
+        android:textColorHint="#99000000" />
+    <Button
+        android:id="@+id/registrargastos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/monto"
+        android:layout_marginTop="100dp"
+        android:background="#687089"
+        android:text="Registrar y pasar al formulario 3"
+        app:backgroundTint="#687089" />
+
+</RelativeLayout>

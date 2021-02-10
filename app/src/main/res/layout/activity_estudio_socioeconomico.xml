@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EFF1F8"
+    tools:context=".estudio_socioeconomico">
+
+
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="#687089"
+        android:paddingTop="25dp"
+        android:text="Estudio Socioeconómico"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
+
+    <ScrollView
+        android:id="@+id/referenciaxd"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_marginTop="75dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/user"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/text1"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginRight="50dp"
+                android:background="#FFFFFF"
+                android:ems="10"
+                android:hint="ID del usuario:"
+                android:textColorHint="#99000000"/>
+
+            <EditText
+                android:id="@+id/cases"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/text1"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginRight="50dp"
+                android:background="#FFFFFF"
+                android:ems="10"
+                android:hint="ID del caso:"
+                android:textColorHint="#99000000"/>
+
+            <EditText
+                android:id="@+id/bene"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/text1"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginRight="50dp"
+                android:background="#FFFFFF"
+                android:ems="10"
+                android:hint="ID del beneficiario:"
+                android:textColorHint="#99000000"/>
+
+            <EditText
+                android:id="@+id/ingresom"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/text1"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginRight="50dp"
+                android:background="#FFFFFF"
+                android:ems="10"
+                android:hint="Ingreso Mensual:"
+                android:inputType="numberDecimal"
+                android:paddingRight="15dp"
+                android:textColor="#000000"
+                android:textColorHint="#99000000" />
+
+
+            <EditText
+                android:id="@+id/incap"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/spinner3"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginRight="50dp"
+                android:background="#FFFFFF"
+                android:ems="10"
+                android:hint="Incapacidad:"
+                android:inputType="text"
+                android:paddingRight="15dp"
+                android:textColor="#000000"
+                android:textColorHint="#99000000" />
+
+            <EditText
+                android:id="@+id/enfer"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/spinner3"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginRight="50dp"
+                android:background="#FFFFFF"
+                android:ems="10"
+                android:hint="Enfermedad:"
+                android:inputType="text"
+                android:paddingRight="15dp"
+                android:textColor="#000000"
+                android:textColorHint="#99000000" />
+
+            <EditText
+                android:id="@+id/totalgas"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/spinner3"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginRight="50dp"
+                android:background="#FFFFFF"
+                android:ems="10"
+                android:hint="Gastos totales:"
+                android:inputType="numberDecimal"
+                android:paddingRight="15dp"
+                android:textColor="#000000"
+                android:textColorHint="#99000000" />
+
+            <EditText
+                android:id="@+id/sermact"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/spinner3"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginRight="50dp"
+                android:background="#FFFFFF"
+                android:ems="10"
+                android:hint="Servicio Mactual:"
+                android:inputType="text"
+                android:paddingRight="15dp"
+                android:textColor="#000000"
+                android:textColorHint="#99000000" />
+
+            <EditText
+                android:id="@+id/tipovivi"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_below="@+id/spinner3"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginRight="50dp"
+                android:background="#FFFFFF"
+                android:ems="10"
+                android:hint="Tipo de vivienda"
+                android:inputType="text"
+                android:paddingRight="15dp"
+                android:textColor="#000000"
+                android:textColorHint="#99000000" />
+
+            <EditText
+                android:id="@+id/servact"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_below="@+id/spinner3"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginRight="50dp"
+                android:background="#FFFFFF"
+                android:ems="10"
+                android:hint="Servicio actual:"
+                android:inputType="text"
+                android:paddingRight="15dp"
+                android:textColor="#000000"
+                android:textColorHint="#99000000" />
+
+            <EditText
+                android:id="@+id/support"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_below="@+id/spinner3"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginRight="50dp"
+                android:background="#FFFFFF"
+                android:ems="10"
+                android:hint="Apoyo solicitado:"
+                android:inputType="text"
+                android:paddingRight="15dp"
+                android:textColor="#000000"
+                android:textColorHint="#99000000" />
+
+            <EditText
+                android:id="@+id/diag"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_below="@+id/spinner3"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginRight="50dp"
+                android:background="#FFFFFF"
+                android:ems="10"
+                android:hint="Diagnóstico:"
+                android:inputType="text"
+                android:paddingRight="15dp"
+                android:textColor="#000000"
+                android:textColorHint="#99000000" />
+
+            <EditText
+                android:id="@+id/obser"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_below="@+id/spinner3"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginRight="50dp"
+                android:background="#FFFFFF"
+                android:ems="10"
+                android:hint="Observaciones:"
+                android:inputType="text"
+                android:paddingRight="15dp"
+                android:textColor="#000000"
+                android:textColorHint="#99000000" />
+
+            <EditText
+                android:id="@+id/esta"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/spinner3"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginRight="50dp"
+                android:background="#FFFFFF"
+                android:ems="10"
+                android:hint="Estado:"
+                android:inputType="textCapCharacters"
+                android:paddingRight="15dp"
+                android:textColor="#000000"
+                android:textColorHint="#99000000" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/registrar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/referenciaxd"
+        android:layout_marginTop="30dp"
+        android:background="#687089"
+        android:text="Registrar y pasar al formulario 2"
+        app:backgroundTint="#687089" />
+
+</RelativeLayout>

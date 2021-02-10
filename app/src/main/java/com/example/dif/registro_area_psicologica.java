@@ -47,7 +47,7 @@ public class registro_area_psicologica extends AppCompatActivity implements View
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_registrobeneficiario);
+        setContentView(R.layout.activity_registro_area_psicologica);
         benename = (EditText) findViewById(R.id.benename);
         benenamedad = (EditText) findViewById(R.id.benenamedad);
         benenamemom = (EditText) findViewById(R.id.benenamemom);

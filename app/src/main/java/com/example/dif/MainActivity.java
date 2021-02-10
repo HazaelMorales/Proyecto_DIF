@@ -3,8 +3,10 @@ package com.example.dif;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -69,6 +71,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void ValidarUsuarios() {
+        SharedPreferences ponysUsuario = getSharedPreferences("Ponys", Context.MODE_PRIVATE);
+        SharedPreferences.Editor pony = ponysUsuario.edit();
+        SharedPreferences preferencias = getSharedPreferences("usuario", Context.MODE_PRIVATE);
+        SharedPreferences.Editor mario = preferencias.edit();
+
+
         String user_email = email.getText().toString().trim();
         String user_pass = password.getText().toString().trim();
 
@@ -83,6 +91,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     try {
                         JSONObject jsonjObject = new JSONObject(response);
                         String Rol = jsonjObject.getString("rol");
+                        String idusaer = jsonjObject.getString("id_usuario");
+                        String id_trabajador = jsonjObject.getString("id_usuario");
+                        String nombre_trabajador = jsonjObject.getString("nombres");
+                        String ApellidoPa_trabajador = jsonjObject.getString("AP");
                         switch (Rol) {
                             case "1":
                                 Intent a = new Intent(MainActivity.this, admin.class);
@@ -90,12 +102,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                                 finish();
                                 break;
                             case "2":
-                                Intent a1 = new Intent(MainActivity.this, general.class);
-                                startActivity(a1);
-                                finish();
+                                Toast.makeText(MainActivity.this,"IDk",Toast.LENGTH_LONG).show();
                                 break;
                             case "3":
-                                Intent a2 = new Intent(MainActivity.this, areajuridica.class);
+                                Intent a2 = new Intent(MainActivity.this, Juridico.class);
+                                a2.putExtra("id_suser",idusaer);
                                 startActivity(a2);
                                 finish();
                                 break;
@@ -105,18 +116,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                                 finish();
                                 break;
                             case "5":
+                                mario.putString("id_trabajador",id_trabajador);
+                                mario.commit();
                                 Intent a4 = new Intent(MainActivity.this, area_psicologia.class);
                                 startActivity(a4);
                                 finish();
                                 break;
                             case "6":
+                                mario.putString("id_trabajador",id_trabajador);
+                                mario.putString("nombres_trabajador",nombre_trabajador);
+                                mario.putString("ApellidoPa",ApellidoPa_trabajador);
+                                mario.commit();
                                 Intent a5 = new Intent(MainActivity.this, area_medica.class);
                                 startActivity(a5);
                                 finish();
                                 break;
                             case "7":
-                                Intent a6 = new Intent(MainActivity.this, areajuridica_secre.class);
-                                startActivity(a6);
+                                Toast.makeText(MainActivity.this,"IDk",Toast.LENGTH_LONG).show();
                                 break;
                             default:
                                 Toast.makeText(MainActivity.this, "No existe Usuario o Contraseña", Toast.LENGTH_LONG).show();

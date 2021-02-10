@@ -304,7 +304,7 @@
         android:layout_below="@+id/referenciaxd"
         android:layout_marginTop="30dp"
         android:background="#687089"
-        android:text="Registrar"
+        android:text="Registrar y pasar al siguiente paso"
         app:backgroundTint="#687089" />
 
 </RelativeLayout>

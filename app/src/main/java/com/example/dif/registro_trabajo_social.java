@@ -47,7 +47,7 @@ public class registro_trabajo_social extends AppCompatActivity implements View.O
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_registrobeneficiario);
+        setContentView(R.layout.activity_registro_trabajo_social);
         benename = (EditText) findViewById(R.id.benename);
         benenamedad = (EditText) findViewById(R.id.benenamedad);
         benenamemom = (EditText) findViewById(R.id.benenamemom);
@@ -90,7 +90,8 @@ public class registro_trabajo_social extends AppCompatActivity implements View.O
         switch (view.getId()){
             case R.id.registrar:
                 insertar_beneficiarios();
-
+                Intent i = new Intent(registro_trabajo_social.this,addcase_area_trabajosocial.class);
+                startActivity(i);
                 break;
             case R.id.benefechanacimiento:
                 showDatePickerDialog();
@@ -173,9 +174,8 @@ public class registro_trabajo_social extends AppCompatActivity implements View.O
                 public void onResponse(String response) {
                     if (response.equalsIgnoreCase("Datos Insertados")) {
                         Toast.makeText(registro_trabajo_social.this, "Datos Ingresados Correctamente", Toast.LENGTH_LONG).show();
-                        Intent i = new Intent(registro_trabajo_social.this,areajuridicaseguimiento.class);
-                        startActivity(i);
-                        finish();
+                        Intent c = new Intent(registro_trabajo_social.this,addcase_area_trabajosocial.class);
+                        startActivity(c);
                     } else {
                         Toast.makeText(registro_trabajo_social.this, response, Toast.LENGTH_LONG).show();
                     }

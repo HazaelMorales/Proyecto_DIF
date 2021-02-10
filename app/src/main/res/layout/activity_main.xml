@@ -52,10 +52,13 @@
         android:layout_marginTop="10dp"
         android:layout_marginRight="50dp"
         android:background="#FFFFFF"
-        android:hint="Contraseña"
-        android:inputType="textPassword"
         android:textColor="#000000"
-        android:textColorHint="#99000000" />
+        android:textColorHint="#99000000"
+        style="@style/Widget.AppCompat.EditText"
+        android:hint="Contraseña"
+        android:imeActionLabel="@string/URL_USUARIOS"
+        android:imeOptions="actionDone"
+        android:inputType="textPassword" />
     <Button
         android:id="@+id/login"
         android:layout_width="match_parent"

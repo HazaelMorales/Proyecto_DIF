@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EFF1F8"
+    tools:context=".Juridico_opcaso">
+
+    <TextView
+        android:id="@+id/smain"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="#687089"
+        android:paddingTop="25dp"
+        android:text="Caso de Beneficiario"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
+    <ImageView
+        android:id="@+id/fotito"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="125dp"
+        android:layout_marginRight="125dp"
+        android:background="@mipmap/logodif"
+        android:layout_below="@+id/smain"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/fotito">
+
+
+
+        <Button
+            android:id="@+id/saddcaso"
+            android:textAllCaps="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:background="#687089"
+            android:textSize="16dp"
+            android:text="Agregar caso"
+            app:backgroundTint="#687089" />
+        <Button
+            android:id="@+id/svercasito"
+            android:textAllCaps="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:background="#687089"
+            android:textSize="16dp"
+            android:text="Ver Casos"
+            app:backgroundTint="#687089" />
+        <Button
+            android:id="@+id/ssegcaso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="50dp"
+            android:background="#687089"
+            android:text="Seguimiento a casos"
+            android:textAllCaps="false"
+            android:textSize="16dp"
+            app:backgroundTint="#687089" />
+
+        <Button
+            android:id="@+id/scerrar"
+            android:textAllCaps="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:background="#687089"
+            android:text="Salir"
+            app:backgroundTint="#687089"
+            android:textSize="16dp"
+            android:layout_marginTop="20dp" />
+    </LinearLayout>
+</RelativeLayout>

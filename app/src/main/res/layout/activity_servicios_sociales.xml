@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EFF1F8"
+    tools:context=".servicios_sociales">
+
+
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="#687089"
+        android:paddingTop="25dp"
+        android:text="Servicio Sociales"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
+
+    <ScrollView
+        android:id="@+id/referenciaxd"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_marginTop="75dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/service"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/text1"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginRight="50dp"
+                android:hint="Servicio"
+                android:background="#FFFFFF"
+                android:ems="10"
+                android:textColorHint="#99000000"/>
+
+            <EditText
+                android:id="@+id/bene2"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/text1"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginRight="50dp"
+                android:hint="ID del beneficiario:"
+                android:background="#FFFFFF"
+                android:ems="10"
+                android:inputType="number"
+                android:textColorHint="#99000000"/>
+
+            <EditText
+                android:id="@+id/canaintra"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/text1"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginRight="50dp"
+                android:hint="Canalización intrainstitucional:"
+                android:background="#FFFFFF"
+                android:ems="10"
+                android:textColorHint="#99000000"/>
+
+            <EditText
+                android:id="@+id/canainsti"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/text1"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginRight="50dp"
+                android:background="#FFFFFF"
+                android:ems="10"
+                android:hint="Canalización institucional:"
+                android:inputType="text"
+                android:paddingRight="15dp"
+                android:textColor="#000000"
+                android:textColorHint="#99000000" />
+
+
+            <EditText
+                android:id="@+id/refe"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/spinner3"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginRight="50dp"
+                android:background="#FFFFFF"
+                android:ems="10"
+                android:hint="Referidos:"
+                android:inputType="text"
+                android:paddingRight="15dp"
+                android:textColor="#000000"
+                android:textColorHint="#99000000" />
+
+            <EditText
+                android:id="@+id/autoridad"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/spinner3"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginRight="50dp"
+                android:background="#FFFFFF"
+                android:ems="10"
+                android:hint="Contacto de la autoridad:"
+                android:inputType="text"
+                android:paddingRight="15dp"
+                android:textColor="#000000"
+                android:textColorHint="#99000000" />
+
+            <EditText
+                android:id="@+id/acciones"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/spinner3"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginRight="50dp"
+                android:background="#FFFFFF"
+                android:ems="10"
+                android:hint="Acciones emprendidas:"
+                android:inputType="text"
+                android:paddingRight="15dp"
+                android:textColor="#000000"
+                android:textColorHint="#99000000" />
+
+            <EditText
+                android:id="@+id/areas"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/spinner3"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginRight="50dp"
+                android:background="#FFFFFF"
+                android:ems="10"
+                android:hint="Areas en seguimiento:"
+                android:inputType="text"
+                android:paddingRight="15dp"
+                android:textColor="#000000"
+                android:textColorHint="#99000000" />
+
+            <EditText
+                android:id="@+id/status"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_below="@+id/spinner3"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginRight="50dp"
+                android:background="#FFFFFF"
+                android:ems="10"
+                android:hint="Estatus:"
+                android:inputType="text"
+                android:paddingRight="15dp"
+                android:textColor="#000000"
+                android:textColorHint="#99000000" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/registrarservicio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/referenciaxd"
+        android:layout_marginTop="30dp"
+        android:background="#687089"
+        android:text="Registrar"
+        app:backgroundTint="#687089" />
+
+</RelativeLayout>

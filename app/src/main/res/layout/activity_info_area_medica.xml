@@ -286,7 +286,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginRight="50dp"
         android:background="#687089"
-        android:text="Agregar notas"
+        android:text="Agregar Casos"
         app:backgroundTint="#687089" />
     <Button
         android:id="@+id/viewnotes"
@@ -297,10 +297,11 @@
         android:layout_marginTop="10dp"
         android:layout_marginRight="50dp"
         android:background="#687089"
-        android:text="Ver notas"
+        android:text="Ver Casos"
         app:backgroundTint="#687089" />
+
     <Button
-        android:id="@+id/cnalzar"
+        android:id="@+id/verDatosMedicos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/viewnotes"
@@ -308,8 +309,9 @@
         android:layout_marginTop="10dp"
         android:layout_marginRight="50dp"
         android:background="#687089"
-        android:text="Canalizar"
+        android:text="Ver datos Medicos"
         app:backgroundTint="#687089" />
+
 
 
 

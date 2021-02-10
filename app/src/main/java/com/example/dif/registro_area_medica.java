@@ -47,7 +47,7 @@ public class registro_area_medica extends AppCompatActivity implements View.OnCl
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_registrobeneficiario);
+        setContentView(R.layout.activity_registro_area_medica);
         benename = (EditText) findViewById(R.id.benename);
         benenamedad = (EditText) findViewById(R.id.benenamedad);
         benenamemom = (EditText) findViewById(R.id.benenamemom);
@@ -90,7 +90,9 @@ public class registro_area_medica extends AppCompatActivity implements View.OnCl
         switch (view.getId()){
             case R.id.registrar:
                 insertar_beneficiarios();
-
+                Intent i = new Intent(registro_area_medica.this,area_medica.class);
+                startActivity(i);
+                finish();
                 break;
             case R.id.benefechanacimiento:
                 showDatePickerDialog();
@@ -168,23 +170,17 @@ public class registro_area_medica extends AppCompatActivity implements View.OnCl
             benenombreescuela.setError("Complete los campos");
         } else {
             progressDialog.show();
+            /*https://checolin00p2.000webhostapp.com/DIF/dif_php/ingresar_beneficiario.php*/
             StringRequest request = new StringRequest(Request.Method.POST, "https://checolin00p2.000webhostapp.com/DIF/dif_php/ingresar_beneficiario.php", new Response.Listener<String>() {
                 @Override
                 public void onResponse(String response) {
-                    if (response.equalsIgnoreCase("Datos Insertados")) {
-                        Toast.makeText(registro_area_medica.this, "Datos Ingresados Correctamente", Toast.LENGTH_LONG).show();
-                        Intent i = new Intent(registro_area_medica.this,seguimiento_area_medica.class);
-                        startActivity(i);
-                        finish();
-                    } else {
-                        Toast.makeText(registro_area_medica.this, response, Toast.LENGTH_LONG).show();
-                    }
+                    Toast.makeText(registro_area_medica.this, response, Toast.LENGTH_LONG).show();
                     progressDialog.dismiss();
                 }
             }, new Response.ErrorListener() {
                 @Override
                 public void onErrorResponse(VolleyError error) {
-                    Toast.makeText(registro_area_medica.this, "Datos subidos incorrectamente", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(registro_area_medica.this, error.toString(), Toast.LENGTH_SHORT).show();
                     progressDialog.dismiss();
                 }
             }) {

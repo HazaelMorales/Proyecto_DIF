@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EFF1F8"
+    tools:context=".Juridico_vercasos">
+    <TextView
+        android:id="@+id/snsesion1"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="#687089"
+        android:paddingTop="25dp"
+        android:text="Lista de Casos"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
+
+    <ListView
+        android:id="@+id/ofelia"
+        android:layout_width="match_parent"
+        android:layout_height="580dp"
+        android:layout_below="@+id/snsesion1"
+        android:background="#EFF1F8"
+        android:textColor="#000000"></ListView>
+</RelativeLayout>

@@ -49,19 +49,5 @@
         app:backgroundTint="#687089"
         android:layout_below="@+id/nuevobene2"/>
 
-    <Button
-        android:id="@+id/canalizar2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="50dp"
-        android:layout_marginRight="50dp"
-        android:background="#687089"
-        android:text="Canalizar Beneficiario"
-        app:backgroundTint="#687089"
-        android:layout_marginTop="20dp"
-        android:layout_below="@+id/seguimiento2"/>
-
-
-
 
 </RelativeLayout>

@@ -2,7 +2,9 @@ package com.example.dif;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -62,7 +64,8 @@ public class seguimiento_area_medica extends AppCompatActivity implements View.O
         });
     }
     private void listabeneficiarios(){
-        String url = "https://checolin00p2.000webhostapp.com/DIF/dif_php/obtenerBeneficiarios.php";
+        /*"https://checolin00p2.000webhostapp.com/DIF/dif_php/obtenerBeneficiarios.php"*/
+        String url = "http://192.168.0.103/dif_php/obtenerBeneficiarios.php";
         cliente.post(url, new AsyncHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
@@ -94,11 +97,16 @@ public class seguimiento_area_medica extends AppCompatActivity implements View.O
 
     private void enviarDatos(String a){
         String posicion = a;
+        SharedPreferences parametrosBeneficiario = getSharedPreferences("beneficiario", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = parametrosBeneficiario.edit();
+
+        /*https://checolin00p2.000webhostapp.com/DIF/dif_php/mostrarDatosBeneficiarios.php*/
         StringRequest request = new StringRequest(Request.Method.POST, "https://checolin00p2.000webhostapp.com/DIF/dif_php/mostrarDatosBeneficiarios.php", new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 try {
                     JSONObject jsonObject = new JSONObject(response);
+                    String id_ben = jsonObject.getString("id_beneficiario");
                     String nombreCompleto = jsonObject.getString("nombres");
                     String ApellidoPaterno = jsonObject.getString("AP");
                     String ApellidoMaterno = jsonObject.getString("AM");
@@ -115,25 +123,30 @@ public class seguimiento_area_medica extends AppCompatActivity implements View.O
                     String escol = jsonObject.getString("escolaridad");
                     String school = jsonObject.getString("nombre_escuela");
                     String ocup = jsonObject.getString("ocupacion");
+
+                    editor.putString("id_ben",id_ben);
+                    editor.putString("nombre",nombreCompleto);
+                    editor.putString("apellidoPa",ApellidoPaterno);
+                    editor.putString("apellidoMa",ApellidoMaterno);
+                    editor.putString("Curp",Curp);
+                    editor.putString("telefono",phone);
+                    editor.putString("benEstado",estate);
+                    editor.putString("municipio",muni);
+                    editor.putString("benAdd",address);
+                    editor.putString("benSex",sex);
+                    editor.putString("benFecha",date);
+                    editor.putString("benLugar",place);
+                    editor.putString("benFecha2",date2);
+                    editor.putString("benCivil",civil);
+                    editor.putString("benEscolaridad",escol);
+                    editor.putString("benEscuela",school);
+                    editor.putString("benOcup",ocup);
+                    editor.commit();
+
                     Intent i = new Intent(seguimiento_area_medica.this, info_area_medica.class);
                     finish();
-                    i.putExtra("nombre",nombreCompleto);
-                    i.putExtra("apellidoPa",ApellidoPaterno);
-                    i.putExtra("apellidoMa",ApellidoMaterno);
-                    i.putExtra("benCurp",Curp);
-                    i.putExtra("benTel",phone);
-                    i.putExtra("benEstado",estate);
-                    i.putExtra("benMuni",muni);
-                    i.putExtra("benAdd",address);
-                    i.putExtra("benSex",sex);
-                    i.putExtra("benFecha",date);
-                    i.putExtra("benLugar",place);
-                    i.putExtra("benFecha2",date2);
-                    i.putExtra("benCivil",civil);
-                    i.putExtra("benEscolaridad",escol);
-                    i.putExtra("benEscuela",school);
-                    i.putExtra("benOcup",ocup);
                     startActivity(i);
+
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }

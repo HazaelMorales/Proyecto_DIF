@@ -12,6 +12,7 @@ import android.widget.Button;
 public class area_medica extends AppCompatActivity implements View.OnClickListener {
 
     Button nuevo1,seguir1,salir;
+    String id_worker;
     @Override
     public void onBackPressed() {
         new AlertDialog.Builder(this)
@@ -35,11 +36,8 @@ public class area_medica extends AppCompatActivity implements View.OnClickListen
         nuevo1 = (Button) findViewById(R.id.nuevobene2);
         seguir1 = (Button) findViewById(R.id.seguimiento2);
 
-
         nuevo1.setOnClickListener(this);
         seguir1.setOnClickListener(this);
-
-
     }
 
     @Override
@@ -55,8 +53,6 @@ public class area_medica extends AppCompatActivity implements View.OnClickListen
                 startActivity(j);
                 finish();
                 break;
-
-
         }
 
     }

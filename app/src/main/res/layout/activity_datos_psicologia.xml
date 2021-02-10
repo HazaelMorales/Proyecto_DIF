@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DatosPsicologia">
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="#687089"
+        android:paddingTop="25dp"
+        android:text="Datos Psicologia"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
+
+    <ScrollView
+        android:id="@+id/referenciaxd"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_marginTop="75dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:orientation="vertical">
+
+
+            <EditText
+                android:id="@+id/PsiFechaRegistro"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/text1"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="75dp"
+                android:layout_marginRight="50dp"
+                android:background="#FFFFFF"
+                android:ems="10"
+                android:clickable="true"
+                android:focusable="false"
+                android:hint="Fecha Consulta*"
+                android:inputType="date"
+                android:paddingRight="15dp"
+                android:textColor="#000000"
+                android:textColorHint="#99000000" />
+
+            <EditText
+                android:id="@+id/PsiHoraConsulta"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/PsiFechaRegistro"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="50dp"
+                android:background="#FFFFFF"
+                android:ems="10"
+                android:clickable="true"
+                android:focusable="false"
+                android:hint="Hora Consulta*"
+                android:inputType="time"
+                android:paddingRight="15dp"
+                android:textColor="#000000"
+                android:textColorHint="#99000000" />
+
+
+            <EditText
+                android:id="@+id/PsiMotivo"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/PsiHoraConsulta"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="50dp"
+                android:background="#FFFFFF"
+                android:ems="10"
+                android:hint="Motivo*"
+                android:inputType="text"
+                android:paddingRight="15dp"
+                android:textColor="#000000"
+                android:textColorHint="#99000000" />
+
+            <EditText
+                android:id="@+id/PsiTipo"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/PsiMotivo"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="50dp"
+                android:background="#FFFFFF"
+                android:ems="10"
+                android:hint="Tipo de Registro*"
+                android:inputType="text"
+                android:paddingRight="15dp"
+                android:textColor="#000000"
+                android:textColorHint="#99000000" />
+
+            <EditText
+                android:id="@+id/PsiNotas"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/PsiTipo"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="50dp"
+                android:background="#FFFFFF"
+                android:ems="10"
+                android:hint="Notas de Sesion*"
+                android:inputType="text"
+                android:textColor="#000000"
+                android:textColorHint="#99000000" />
+
+            <EditText
+                android:id="@+id/PsiPsiquiatra"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/EditRespiracion"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="50dp"
+                android:background="#FFFFFF"
+                android:ems="10"
+                android:hint="Psiquiatra o Psicologo*"
+                android:inputType="text"
+                android:paddingRight="15dp"
+                android:textColor="#000000"
+                android:textColorHint="#99000000" />
+
+            <EditText
+                android:id="@+id/PsiConsentimiento"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/PsiPsiquiatra"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="50dp"
+                android:background="#FFFFFF"
+                android:ems="10"
+                android:hint="Consentimiento*"
+                android:inputType="number"
+                android:paddingRight="15dp"
+                android:textColor="#000000"
+                android:textColorHint="#99000000" />
+
+            <EditText
+                android:id="@+id/PsiEstado"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/PsiConsentimiento"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="50dp"
+                android:background="#FFFFFF"
+                android:ems="10"
+                android:hint="Estado*"
+                android:inputType="text"
+                android:paddingRight="15dp"
+                android:textColor="#000000"
+                android:textColorHint="#99000000" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/registrar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/referenciaxd"
+        android:layout_marginTop="30dp"
+        android:background="#687089"
+        android:text="Registrar"
+        app:backgroundTint="#687089" />
+
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:paddingTop="25dp"
+        android:text="Datos Psicologia"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:layout_below="@id/registrar"/>
+
+</RelativeLayout>

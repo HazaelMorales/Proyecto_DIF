@@ -2,21 +2,40 @@ package com.example.dif;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.android.volley.AuthFailureError;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class info_area_medica extends AppCompatActivity implements  View.OnClickListener{
     TextView txtName, txtCurp, txtTelefono, txtEstado, txtMunicipio, txtDomicilio, txtSexo, txtFecha_Nacimiento, txtLugar_Nacimiento, txtFecha_Registro, txtEstadoCivil, txtEscolaridad , txtNombre_Escuela ,txtOcupacion;
-    Button aceptar,addnote,canalizar,vercasos;
-    String valName,valApellidoMa,valApellidoPa,valCurp,valTelefono,valEstado,valMunicipio,valDomicilio,valSexo,valFechaNacimiento,valLugarNacimiento,valFechaRegistro,valEstadoCivil,valEscolaridad,valEscuela,valOcupacion;
+    Button aceptar,addnote,canalizar,vercasos,verDatosMedicos;
+    String id_bene,valName,valApellidoMa,valApellidoPa,valCurp,valTelefono,valEstado,valMunicipio,valDomicilio,valSexo,valFechaNacimiento,valLugarNacimiento,valFechaRegistro,valEstadoCivil,valEscolaridad,valEscuela,valOcupacion;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_info_area_medica);
+
+        SharedPreferences preferencias = getSharedPreferences("beneficiario", Context.MODE_PRIVATE);
 
         txtName = (TextView) findViewById(R.id.beneFullName);
         txtCurp = (TextView) findViewById(R.id.beneCurp);
@@ -33,31 +52,34 @@ public class info_area_medica extends AppCompatActivity implements  View.OnClick
         txtNombre_Escuela = (TextView) findViewById(R.id.beneEscuela);
         txtOcupacion = (TextView) findViewById(R.id.beneOcupacion);
 
-        valName = getIntent().getStringExtra("nombre");
-        valApellidoPa = getIntent().getStringExtra("apellidoPa");
-        valApellidoMa = getIntent().getStringExtra("apellidoMa");
-        valCurp = getIntent().getStringExtra("benCurp");
-        valTelefono = getIntent().getStringExtra("benTel");
-        valEstado = getIntent().getStringExtra("benEstado");
-        valMunicipio = getIntent().getStringExtra("benMuni");
-        valDomicilio = getIntent().getStringExtra("benAdd");
-        valSexo = getIntent().getStringExtra("benSex");
-        valFechaNacimiento = getIntent().getStringExtra("benFecha");
-        valLugarNacimiento = getIntent().getStringExtra("benLugar");
-        valFechaRegistro = getIntent().getStringExtra("benFecha2");
-        valEstadoCivil = getIntent().getStringExtra("benCivil");
-        valEscolaridad = getIntent().getStringExtra("benEscolaridad");
-        valEscuela = getIntent().getStringExtra("benEscuela");
-        valOcupacion = getIntent().getStringExtra("benOcup");
+        id_bene = preferencias.getString("id_ben","");
+        valName = preferencias.getString("nombre","");
+        valApellidoPa = preferencias.getString("apellidoPa","");
+        valApellidoMa = preferencias.getString("apellidoMa","");
+        valCurp = preferencias.getString("Curp","");
+        valTelefono = preferencias.getString("telefono","");
+        valEstado = preferencias.getString("benEstado","");
+        valMunicipio = preferencias.getString("municipio","");
+        valDomicilio = preferencias.getString("benAdd","");
+        valSexo = preferencias.getString("benSex","");
+        valFechaNacimiento = preferencias.getString("benFecha","");
+        valLugarNacimiento = preferencias.getString("benLugar","");
+        valFechaRegistro = preferencias.getString("benFecha2","");
+        valEstadoCivil = preferencias.getString("benCivil","");
+        valEscolaridad = preferencias.getString("benEscolaridad","");
+        valEscuela = preferencias.getString("benEscuela","");
+        valOcupacion = preferencias.getString("benOcup","");
 
         aceptar = (Button) findViewById(R.id.aceptar);
         addnote = (Button) findViewById(R.id.addnotes);
-        canalizar= (Button) findViewById(R.id.cnalzar);
         vercasos=(Button) findViewById(R.id.viewnotes);
+        verDatosMedicos = (Button) findViewById(R.id.verDatosMedicos);
+
         aceptar.setOnClickListener(this);
         addnote.setOnClickListener(this);
         canalizar.setOnClickListener(this);
         vercasos.setOnClickListener(this);
+        verDatosMedicos.setOnClickListener(this);
 
         txtName.setText(valName+" "+ valApellidoPa + " " + valApellidoMa);
         txtCurp.setText(valCurp);
@@ -80,24 +102,22 @@ public class info_area_medica extends AppCompatActivity implements  View.OnClick
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.aceptar:
-                Intent i = new Intent(info_area_medica.this,interfazjuridica.class);
+                Intent i = new Intent(info_area_medica.this,area_medica.class);
                 startActivity(i);
                 finish();
                 break;
             case R.id.addnotes:
-                Intent i1 = new Intent(info_area_medica.this,casos.class);
+                Intent i1 = new Intent(info_area_medica.this,addcase_area_medica.class);
                 startActivity(i1);
                 finish();
                 break;
-            case R.id.cnalzar:
-                Intent i2 = new Intent(info_area_medica.this,canalizar.class);
-                startActivity(i2);
-                finish();
-                break;
             case R.id.viewnotes:
-                Intent i3 = new Intent(info_area_medica.this, vercasos.class);
+                Intent i3 = new Intent(info_area_medica.this,ListaCasos.class);
                 startActivity(i3);
-                finish();
+                break;
+            case R.id.verDatosMedicos:
+                Intent i4 = new Intent(info_area_medica.this,MostrarDatosMedicos.class);
+                startActivity(i4);
                 break;
         }}
     @Override
@@ -106,5 +126,4 @@ public class info_area_medica extends AppCompatActivity implements  View.OnClick
         startActivity(i2);
         finish();
     }
-
 }

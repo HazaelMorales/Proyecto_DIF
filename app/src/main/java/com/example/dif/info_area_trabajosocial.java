@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -85,19 +86,13 @@ public class info_area_trabajosocial extends AppCompatActivity implements View.O
                 finish();
                 break;
             case R.id.addnotes:
-                Intent i1 = new Intent(info_area_trabajosocial.this,casos.class);
-                startActivity(i1);
-                finish();
+                Toast.makeText(info_area_trabajosocial.this,"no",Toast.LENGTH_LONG).show();
                 break;
             case R.id.cnalzar:
-                Intent i2 = new Intent(info_area_trabajosocial.this,canalizar_area_trabajosocial.class);
-                startActivity(i2);
-                finish();
+                Toast.makeText(info_area_trabajosocial.this,"no",Toast.LENGTH_LONG).show();
                 break;
             case R.id.viewnotes:
-                Intent i3 = new Intent(info_area_trabajosocial.this, vercasos_area_trabajosocial.class);
-                startActivity(i3);
-                finish();
+                Toast.makeText(info_area_trabajosocial.this,"no",Toast.LENGTH_LONG).show();
                 break;
         }}
     @Override

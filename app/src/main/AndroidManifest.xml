@@ -12,7 +12,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DIF"
         android:usesCleartextTraffic="true">
-        <activity android:name=".canalizar_area_trabajosocial"></activity>
+        <activity android:name=".Juridico_versession"></activity>
+        <activity android:name=".Juridico_newsession" />
+        <activity android:name=".Juridico_vercasos" />
+        <activity android:name=".Juridico_sncaso" />
+        <activity android:name=".Juridico_opcaso" />
+        <activity android:name=".Juridico_verBeneficiario" />
+        <activity android:name=".Juridico_Vcasos" />
+        <activity android:name=".Juridico_RBeneficiario" />
+        <activity android:name=".Juridico" />
+        <activity android:name=".canalizar_area_trabajosocial" />
         <activity android:name=".canalizar_area_psicologica" />
         <activity android:name=".canalizar_area_medica" />
         <activity android:name=".vercasos_area_trabajosocial" />
