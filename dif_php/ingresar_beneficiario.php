@@ -1,5 +1,5 @@
 <?php
-Require 'registrobene.php';
+require('conexion.php');
 $nombre = $_POST['nombres'];
 $ap = $_POST['AP'];
 $am = $_POST['AM'];
@@ -22,12 +22,12 @@ $sql = "INSERT INTO beneficiarios (nombres, AP, AM, curp, telefono, estado, muni
 VALUES ('$nombre','$ap','$am','$curp','$telefono','$estado','$municipio','$domicilio','$sexo','$fecha_nacimiento','$lugar_nacimiento','$fecha_registro','$estado_civil','$escolaridad','$nombre_escuela','$ocupacion')";
 
 if(!empty($nombre) && !empty($ap) && !empty($am) && !empty($curp) && !empty($telefono) && !empty($estado) && !empty($municipio) && !empty($domicilio) && !empty($sexo) && !empty($fecha_nacimiento) && !empty($lugar_nacimiento) && !empty($fecha_registro) && !empty($estado_civil) && !empty($escolaridad) && !empty($nombre_escuela) && !empty($ocupacion)){
-    $result = mysqli_query($conexion, $sql);
+    $result = mysqli_query($conn, $sql);
     if($result){
         echo "Datos Insertados";
     }else{
-        echo "No se pudo registrar el beneficiario";
+        echo "No se pudo registrar el beneficiario",$nombre,$ap,$am,$curp,$telefono,$estado,$municipio,$domicilio,$sexo,$fecha_nacimiento,$lugar_nacimiento,$fecha_registro,$estado_civil,$escolaridad,$nombre_escuela,$ocupacion;
     }
-    mysqli_close($conexion);
+    mysqli_close($conn);
 }
 ?>
